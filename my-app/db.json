@@ -1,0 +1,45 @@
+{
+  "users": [],
+  "data": [
+    {
+      "id": "~n8siRD",
+      "task": "czdzsd",
+      "cheched": false
+    },
+    {
+      "id": 1529376563620,
+      "task": "Nauci React",
+      "checked": true,
+      "priority": "Medium",
+      "date": "6/19/2018"
+    },
+    {
+      "id": 1529376575608,
+      "task": "Nauci Angular",
+      "checked": false,
+      "priority": "Medium",
+      "date": "6/19/2018"
+    },
+    {
+      "id": 1529376582954,
+      "task": "Nauci Expres",
+      "checked": true,
+      "priority": "High",
+      "date": "6/19/2018"
+    },
+    {
+      "id": 1529378336513,
+      "task": "MongoDB",
+      "checked": true,
+      "priority": "Medium",
+      "date": "6/18/2018"
+    },
+    {
+      "id": 1529378373485,
+      "task": "VueJS",
+      "priority": "Low",
+      "cheched": false,
+      "date": "6/20/2018"
+    }
+  ]
+}

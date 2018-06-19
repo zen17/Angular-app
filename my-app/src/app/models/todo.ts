@@ -3,7 +3,8 @@ export class Todo {
         public id:number,
         public task:string,
         public checked:boolean,
-        public priority:Priority
+        public priority:Priority,
+        public date:string
     ){}
 }
 

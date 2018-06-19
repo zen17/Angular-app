@@ -1,7 +1,6 @@
 <mat-card  [class.selektovan]="todo.checked" [class.neselektovan]="!todo.checked" >
   <mat-label class="mat-h2">  {{todo.task}} </mat-label>
-  <mat-label class="mat-h4"> priority: {{todo.priority}} </mat-label> 
-  <mat-label>  {{todo.checked}} </mat-label>
-  <button (click)="taskDone()" mat-raised-button >{{ proveriStanje()}}</button>
-  <button (click)="taskDelete()" mat-raised-button >Delete</button>
+  <mat-label id="priority" > {{todo.priority}} </mat-label> 
+  <button class="dugme" (click)="taskDone()" mat-raised-button >{{ proveriStanje()}}</button>
+  <button class="dugme" (click)="taskDelete()" mat-raised-button >Delete</button>
 </mat-card>

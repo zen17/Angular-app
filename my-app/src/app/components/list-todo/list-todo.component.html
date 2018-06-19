@@ -1,3 +1,5 @@
+<mat-card>
 <div *ngFor="let todo of todolist$ | async">
         <app-todo layout-padding [todo]="todo" ></app-todo>
 </div>
+</mat-card>

@@ -1,6 +1,16 @@
-<mat-card>
-    <input [(ngModel)]="todo.task" />
-   <button (click)="taskCreate()" mat-raised-button >Add Task</button>
-</mat-card>
+ 
+        <form class="example-form">
+                <mat-form-field class="example-full-width">
+                  <input matInput placeholder="type..." value=""  #titleInput>
+                </mat-form-field>
+                    <mat-form-field>
+                      <mat-select [(value)]="selected">
+                      <mat-option value="Low">Low</mat-option>
+                      <mat-option value="Medium">Medium</mat-option>
+                      <mat-option value="High">High</mat-option>
+                     </mat-select>
+                    </mat-form-field>
+         </form>         
+   <button (click)="taskCreate(titleInput.value)" mat-raised-button >Add Task</button>
 
   

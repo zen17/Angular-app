@@ -1,27 +1,13 @@
 import { Action } from "@ngrx/store";
 import { Todo } from "../../models/todo";
 import { Priority } from "../../models/todo";
-import {  STRIKE_TODO_ITEM, StrikeTodoItem, DELETE_TODO_ITEM, DeleteTodoItem, ADD_TODO_ITEM, AddTodoItem } from "../actions";
+import {  STRIKE_TODO_ITEM, StrikeTodoItem, 
+    DELETE_TODO_ITEM, DeleteTodoItem,
+     ADD_TODO_ITEM, AddTodoItem,
+     LOAD_DATA, LoadTodoItem } from "../actions";
 
-const initalState: Todo[] = [
-    {
-        id: 1,
-        task: "Nauci ES6",
-        checked: true,
-        priority:Priority.Low
-    }
-    , {
-        id: 2,
-        task: "Nauci React",
-        checked: true,
-        priority:Priority.Medium
-    }
-    , {
-        id: 3,
-        task: "Nauci Angular",
-        checked: false,
-        priority:Priority.High
-    }];
+
+    const initalState: Todo[] =[];
 
 export default function (state:Todo[] = initalState, action: Action) {
     switch(action.type) {
@@ -43,6 +29,11 @@ export default function (state:Todo[] = initalState, action: Action) {
           return state.filter(data=>{
                 return data.id!==obj.todo.id;
             })
+        }
+        case LOAD_DATA:{
+            const obj=action as LoadTodoItem;
+            state=obj.todoArr;
+            return state;
         }
         default: 
             return state;

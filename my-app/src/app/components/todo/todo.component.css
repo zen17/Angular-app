@@ -4,4 +4,14 @@
 }
 .neselektovan{
     margin-top: 5px;
+
+}
+.dugme{
+    float :right;
+    margin-left: 5px;
+}
+.priority{
+    float: right;
+    margin-right:10px;
+    color:yellow;
 }

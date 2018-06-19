@@ -16,7 +16,10 @@ export class ListTodoComponent implements OnInit {
   
   ngOnInit() {
     this.todolist$=this.store$.select('todo');
-    this.todolist$.subscribe(data=>console.log(data));
+    
+  }
+  funkcija() {
+    this.todolist$.subscribe(data=>console.log("nesto",data));
   }
 
 }

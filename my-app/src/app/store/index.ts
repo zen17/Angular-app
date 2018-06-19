@@ -6,7 +6,7 @@ import { Todo } from '../models/Todo';
 
 export interface State {
      todo: Todo[],
-     date :number
+     date :string
 }
 
 export const rootReducer: ActionReducerMap<State> = {

@@ -7,16 +7,16 @@ import { rootReducer } from "./store/index"
 import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 
-
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatButtonModule} from '@angular/material/button';
-import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
 import {RouterModule,Routes, Router} from  "@angular/router";
+import {MatInputModule} from '@angular/material/input';
+import {MatNativeDateModule} from '@angular/material/';
 
 import { AddComponent } from './components/add/add.component';
 import { ListTodoComponent } from './components/list-todo/list-todo.component';
@@ -26,11 +26,22 @@ import { MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule } from
 import { HomeComponent } from './components/home/home.component';
 import { StatisticComponent } from './components/statistic/statistic.component';
 import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrier';
+import { DateComponent } from './components/date/date.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {TodoDataService} from './services/todo-data.service';
+import {HttpClientModule} from "@angular/common/http";
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
+
 
 const appRoutes:Routes=[
-  {path:'',component:HomeComponent},
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {path:'home',component:HomeComponent},
   {path:'statistics',component:StatisticComponent}
 ]
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +51,7 @@ const appRoutes:Routes=[
     MynavComponent,
     HomeComponent,
     StatisticComponent,
+    DateComponent,
   
     
   ],
@@ -61,10 +73,14 @@ const appRoutes:Routes=[
     MatToolbarModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    HttpClientModule,
+    MatGridListModule
     
   ],
-  providers: [
+  providers: [ 
   ],
   bootstrap: [AppComponent]
 })
